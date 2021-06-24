@@ -1,0 +1,20 @@
+extends ./layout.pug
+
+block prepend body 
+  body(data-wio-id=pageContent.id)
+
+  include ./partials/header.pug
+  main.contact
+  div.row
+   div.column
+    img(src="./images/contact.gif")
+   div.column
+    div
+      != PrismicDOM.RichText.asText(pageContent.data.email)
+      br
+      != PrismicDOM.RichText.asText(pageContent.data.instagram)
+      br
+      != PrismicDOM.RichText.asText(pageContent.data.youtube)
+      br
+      != PrismicDOM.RichText.asText(pageContent.data.linkedin)
+      br       

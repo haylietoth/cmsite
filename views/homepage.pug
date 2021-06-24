@@ -1,0 +1,15 @@
+extends ./layout.pug
+
+block prepend body
+  body.homepage(data-wio-id=pageContent.id)
+    
+    include ./partials/header.pug
+    
+    // Content Section
+    div
+     div.container(id="container")
+      div.home-content-section
+        h2.to-letter
+        
+      canvas(id="canvas" style="position: absolute;")
+    

@@ -1,0 +1,27 @@
+extends ./layout.pug
+
+block prepend body
+  body(data-wio-id=pageContent.id)
+
+    include ./partials/header.pug
+
+    // Content Section
+    div.page
+     h1.photos-title
+      != PrismicDOM.RichText.asText(pageContent.data.page_title)
+     div.photos-desc
+      != PrismicDOM.RichText.asText(pageContent.data.page_desc)
+     div.photos-row
+       //- Display the slices
+       for slice in pageContent.data.body
+         case slice.slice_type
+           when 'photos_column'
+             div.photos-column
+               each richTextItem in slice.items
+                 != PrismicDOM.RichText.asHtml(richTextItem.left_column, ctx.linkResolver)
+             div.photos-column
+               each richTextItem in slice.items
+                 != PrismicDOM.RichText.asHtml(richTextItem.middle_column, ctx.linkResolver)
+             div.photos-column
+               each richTextItem in slice.items
+                 != PrismicDOM.RichText.asHtml(richTextItem.right_column, ctx.linkResolver)

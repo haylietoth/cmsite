@@ -1,0 +1,15 @@
+extends ./layout.pug
+
+block prepend body 
+  body(data-wio-id=pageContent.id)
+
+  include ./partials/header.pug
+  // Content Section
+  - var project = pageContent.data.project_info[0]
+   div.project(style="display: block;")
+    section.content-section(class=sectionClass)
+       //- Display the slices
+       for slice in pageContent.data.page_content
+         case slice.slice_type
+           when 'test'
+             

@@ -1,0 +1,30 @@
+extends ./layout.pug
+
+block prepend body 
+  body(data-wio-id=pageContent.id)
+
+  include ./partials/header.pug
+
+  main.vid(style="display: block;")
+    section.videos
+      h1
+       != PrismicDOM.RichText.asText(pageContent.data.title)
+      div
+        != PrismicDOM.RichText.asText(pageContent.data.details)
+      //- Display the slices
+    for slice in pageContent.data.page_content
+     case slice.slice_type
+       when 'video_link'
+         iframe(
+           width="100%" height="60%"
+           src=slice.primary.video.url
+           title='Video Player' 
+           frameborder='0' 
+           allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' 
+           allowfullscreen='')
+         include ./partials/video-details.pug
+       when 'video'
+         video(controls)
+           source(src=slice.primary.video.url, type='video/mp4')
+           img(src=slice.primary.image.url)
+         include ./partials/video-details.pug

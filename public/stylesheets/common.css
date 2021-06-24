@@ -1,0 +1,57 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'BRSonoma-Regular' , sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: #E6E5DB;
+  color: #000;
+  font-family: 'BRSonoma-Regular' , sans-serif;
+  margin: 0 !important;
+}
+
+a {
+  font-weight: 400;
+  letter-spacing : 0.35;
+  text-decoration: none;
+}
+
+h2, h2 a {
+  margin-bottom: 1rem;
+  font-weight: normal;
+  letter-spacing : 0.85;
+  text-align: center;
+}
+
+h3, h3 a {
+  Color:  grey;
+  font-weight: 400;
+  letter-spacing : 0.52;
+  line-height: 28px;
+  font-size: 16px;
+}
+
+h3 i.material-icons {
+  float: none !important;
+  vertical-align:middle;
+  font-size: 16px;
+}
+
+p {
+  margin: 2rem 0;
+}
+
+img, video {
+  max-width: 100%;
+  width: 100%;
+}
+
+video {
+  margin-bottom: 10%;
+}

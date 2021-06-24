@@ -1,3 +1,3 @@
-### Cullen McMahon
+### Madeleine Toth - Graphic Designer
 
-This project holds the code for Cullen McMahon's personal portfolio website.
+This project holds the code for a personal website.

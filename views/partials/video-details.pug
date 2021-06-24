@@ -1,0 +1,14 @@
+div.project-row
+  div.project-column
+    h2(id='title')
+       != PrismicDOM.RichText.asText(slice.primary.title)
+    h3
+       != PrismicDOM.RichText.asText(slice.primary.client)
+    h3
+       != PrismicDOM.RichText.asText(slice.primary.collab)
+    h3.arrow
+       != PrismicDOM.RichText.asText(slice.primary.type)
+       span
+       != PrismicDOM.RichText.asText(slice.primary.year)
+  div.project-column
+     != PrismicDOM.RichText.asText(slice.primary.description)

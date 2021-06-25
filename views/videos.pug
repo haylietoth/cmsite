@@ -22,9 +22,9 @@ block prepend body
            frameborder='0' 
            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' 
            allowfullscreen='')
-         include ./partials/video-details.pug
+         include ./partials/details.pug
        when 'video'
          video(controls)
            source(src=slice.primary.video.url, type='video/mp4')
            img(src=slice.primary.image.url)
-         include ./partials/video-details.pug
+         include ./partials/details.pug

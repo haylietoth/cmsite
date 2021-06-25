@@ -1,17 +1,17 @@
 $(document).ready(function(){
   // NAVIGATION LOGO SCROLL TOP
-$(".logo").on("click", function (e) {
-  e.preventDefault();
-  $(".nav-toggle").removeClass("open");
-  $(".menu-left").removeClass("collapse");
-  $("html, body").animate(
-    {
-      scrollTop: 0
-    },
-    750,
-    "easeInOutQuad"
-  );
-});
+// $(".logo").on("click", function (e) {
+//   e.preventDefault();
+//   $(".nav-toggle").removeClass("open");
+//   $(".menu-left").removeClass("collapse");
+//   $("html, body").animate(
+//     {
+//       scrollTop: 0
+//     },
+//     750,
+//     "easeInOutQuad"
+//   );
+// });
 // LINKS TO ANCHORS
 $('a[href^="#"]').on("click", function (event) {
   var $target = $(this.getAttribute("href"));

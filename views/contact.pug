@@ -4,17 +4,24 @@ block prepend body
   body(data-wio-id=pageContent.id)
 
   include ./partials/header.pug
+  -
   main.contact
-  div.row
-   div.column
-    img(src="./images/contact.gif")
-   div.column
-    div
-      != PrismicDOM.RichText.asText(pageContent.data.email)
-      br
-      != PrismicDOM.RichText.asText(pageContent.data.instagram)
-      br
-      != PrismicDOM.RichText.asText(pageContent.data.youtube)
-      br
-      != PrismicDOM.RichText.asText(pageContent.data.linkedin)
-      br       
+    .links
+      a(href=PrismicDOM.RichText.asText(pageContent.data.email))
+        h1.home-link
+          | Email
+          h1
+      a(href=PrismicDOM.RichText.asText(pageContent.data.instagram))
+        h1.work-link
+          | Instagram
+          h1
+      a(href=PrismicDOM.RichText.asText(pageContent.data.youtube))
+        h1.blog-link
+          | Youtube
+          h1
+      a(href=PrismicDOM.RichText.asText(pageContent.data.linkedin))
+        h1.contact-link
+          | LinkedIn
+          h1     
+    div.contact-image
+      img(src="./images/contact.gif")

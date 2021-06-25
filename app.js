@@ -119,6 +119,20 @@ app.get('/:uid', (req, res, next) => {
         next(`error when retriving page ${error.message}`);
       });
     }
+    else if (uid == 'collection'){
+      // Get a page by its uid
+      req.prismic.api.getByUID("collection", uid)
+      .then((pageContent) => {
+        if (pageContent) {
+          res.render('collection', { pageContent });
+        } else {
+          res.status(404).render('404');
+        }
+      })
+      .catch((error) => {
+        next(`error when retriving page ${error.message}`);
+      });
+    }
     else {
       // Get a page by its uid
       req.prismic.api.getByUID("page", uid)

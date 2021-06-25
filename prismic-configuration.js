@@ -25,6 +25,9 @@ module.exports = {
     if (doc.type == 'contact') {
         return '/' + doc.uid;
     }
+    if (doc.type == 'collection') {
+        return '/' + doc.uid;
+    }
     return '/';
   }
 };

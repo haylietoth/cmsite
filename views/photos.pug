@@ -5,15 +5,15 @@ block prepend body
 
   include ./partials/header.pug
 
-  main.vid(style="display: block;")
-    section.videos
+  main.photo(style="display: block;")
+    section.photos
       h1
        != PrismicDOM.RichText.asText(pageContent.data.title)
       div
         != PrismicDOM.RichText.asText(pageContent.data.details)
       //- Display the slices
-    for slice in pageContent.data.page_content
-     case slice.slice_type
-       when 'image'
-           img(src=slice.primary.image.url)
-           include ./partials/details.pug
+      for slice in pageContent.data.page_content
+       case slice.slice_type
+         when 'image'
+             img(src=slice.primary.image.url)
+             include ./partials/details.pug

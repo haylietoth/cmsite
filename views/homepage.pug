@@ -6,10 +6,10 @@ block prepend body
     include ./partials/header.pug
     
     // Content Section
-    div
-     div.container(id="container")
-      div.home-content-section
-        h2.to-letter
-        
-      canvas(id="canvas" style="position: absolute;")
-    
+    main.home
+      .home-row 
+        .home-column
+          div.home-text
+            != PrismicDOM.RichText.asText(pageContent.data.main_text)
+        .home-column
+          img(src=pageContent.data.image.url)

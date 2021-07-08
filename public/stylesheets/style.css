@@ -6,9 +6,6 @@
 .full-width-image:first-of-type {
   margin-top: 0;
 }
-h3:last-of-type {
-  margin-bottom: 150px;
-}
 .text-content span i {
   font-size: 16px !important;
   vertical-align: text-bottom;
@@ -16,18 +13,44 @@ h3:last-of-type {
 /*End General*/
 
 /*Home page*/
+.home {
+  margin: auto;
+  max-width: 70vw;
+  width: 100vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
+.home-row {
+  display: flex;
+}
+.home-column {
+  flex: 50%;
+}
+.home-column img {
+  border: #616BA8 5px solid;
+}
+.home-column img:hover {
+  border: #bcc4db 5px solid;
+}
+.home-text {
+  text-align: center;
+  padding: 50% 0;
+  letter-spacing: 1px;
+}
 /*End Home page*/
 
 /* videography page */
 .vid {
-  padding: 0 25px;
+  padding: 0 10rem;
 }
 .videos {
   margin-bottom: 3.75rem;
   padding-top: 75px;
 }
 .videos h1 {
-  font-size: 65px;
+  font-size: 10vmin;
   text-align: center;
   letter-spacing: 5;
 }
@@ -40,6 +63,16 @@ h3:last-of-type {
   content: '\2192';
   padding: 0 3px;
 }
+
+/* photograph page */
+.photo {
+  margin-top: 10rem;
+  padding: 0 10rem;
+}
+.photos {
+
+}
+
 
 /* contact page */
 .contact {
@@ -204,7 +237,9 @@ h3:last-of-type {
   padding-left: 30px;
 }
 .project-row {
-  margin-top: 3rem;
+  margin: 3rem 0;
+  padding-bottom: 1rem;
+  border-bottom: black 2px solid;
 }
 .project-row:after {
   content: "";
@@ -225,6 +260,7 @@ h3:last-of-type {
   text-align: left;
   font-family: linotype-sabon, sans-serif;
   font-size: 32px;
+  margin: auto;
 }
 .text-content {
   font-size: 16px;
@@ -267,12 +303,45 @@ h3:last-of-type {
     margin: auto;
   }
 }
-@media (max-width: 1024px) {}
-
+@media (max-width: 1024px) {
+  .contact {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    /* width: 100%; */
+  }
+  .vid, .photo {
+    padding: 0 5rem;
+  }
+  .videos div {
+    text-align: justify;
+    font-size: 18px;
+  }
+}
+@media (max-width: 900px) {
+  .project-column:nth-child(1),
+  .project-column:nth-child(2) {
+    width: 100%;
+  }
+}
 /*Cell Phones*/
 @media (max-width: 767px) {
-  .contact {
-    padding: 150px 20px;
+  .home-row {
+    display: block;
+  }
+  .home-column {
+    flex: 100%;
+  }
+  .home {
+    max-width: auto;
+    width: auto;
+  }
+  .vid, .photo {
+    padding: 0 2rem;
+  }
+  .videos div {
+    font-size: 16px;
   }
   .home-link,
   .work-link,
@@ -327,9 +396,6 @@ h3:last-of-type {
   .photos-column:nth-child(2) {
     width: 100%;
     max-width: 100%;
-  }
-  h3:last-of-type {
-    margin-bottom: 4rem;
   }
   .text-content {
     width: 100%;

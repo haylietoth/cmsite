@@ -29,10 +29,10 @@
   flex: 50%;
 }
 .home-column img {
-  border: #616BA8 5px solid;
+  border: #BCC4DB 5px solid;
 }
 .home-column img:hover {
-  border: #bcc4db 5px solid;
+  border: #616BA8 5px solid;
 }
 .home-text {
   text-align: center;

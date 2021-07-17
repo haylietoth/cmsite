@@ -7,7 +7,7 @@ block prepend body
   -
   main.contact
     .links
-      a(href=PrismicDOM.RichText.asText(pageContent.data.email))
+      a(href="mailto:"+PrismicDOM.RichText.asText(pageContent.data.email))
         h1.home-link
           | Email
           h1

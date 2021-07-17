@@ -26,7 +26,7 @@
     clear: both;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .navcontainer {
     max-width: 720px;
     margin-left: auto;
@@ -151,7 +151,7 @@ header nav ul li {
   float: none;
   margin-left: 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   header nav ul li {
     float: left;
     margin-left: 1rem;
@@ -166,7 +166,7 @@ header nav ul li a {
     padding: .425rem 0rem;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   ul {
     clear: both;
   }
@@ -190,7 +190,7 @@ ul.menu-left {
   transition: all 0.3s ease-out;
   z-index: 10;
 }
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   ul.menu-left {
     display: block !important;
     float: right;
@@ -225,7 +225,7 @@ ul.menu-left.collapse {
 .nav-toggle.open span:last-child {
   transform: rotate(-45deg) translate(4.4px, -4.4px);
 }
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .nav-toggle {
     display: none;
   }

@@ -13,32 +13,47 @@
 /*End General*/
 
 /*Home page*/
+.homepage {
+  background-image: url('/images/background.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+}
 .home {
+  max-width: 1400px;
   margin: auto;
-  max-width: 70vw;
-  width: 100vw;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50% , -50%);
 }
 .home-row {
   display: flex;
+  margin: 200px auto;
 }
 .home-column {
   flex: 50%;
 }
+.home-column:nth-child(1) {
+  margin: 0 2rem 0 6rem;
+  margin-top: inherit;
+}
+.home-column:nth-child(2) {
+  margin: 0 6rem 0 2rem;
+}
+
 .home-column img {
   border: #BCC4DB 5px solid;
+  /* margin: 20% 2rem; */
 }
-.home-column img:hover {
+.home-column img:hover,
+.home-text:hover {
   border: #616BA8 5px solid;
 }
 .home-text {
   text-align: center;
-  padding: 50% 0;
+  /* margin: 50% 2rem; */
+  padding: 20px;
   letter-spacing: 1px;
+  background: #E6E5DB;
+  border: #BCC4DB 5px solid;
 }
+
 /*End Home page*/
 
 /* videography page */
@@ -297,6 +312,12 @@
 }
 
 /* Media Queries */
+@media (min-width: 1400px) {
+  /* .home {
+    max-width: 1400px;
+    margin: auto;
+  } */
+}
 @media (min-width: 1025px) {
   .contact {
     max-width: 1024px;
@@ -304,6 +325,20 @@
   }
 }
 @media (max-width: 1024px) {
+  .home-row {
+    display: block;
+  }
+  .home-column {
+    flex: 100%;
+  }
+  .home-column:nth-child(1) {
+    margin: 2rem auto;
+    width: 600px;
+  }
+  .home-column:nth-child(2) {
+    margin: 2rem auto;
+    width: 300px;
+  }
   .contact {
     position: absolute;
     top: 50%;
@@ -327,12 +362,6 @@
 }
 /*Cell Phones*/
 @media (max-width: 767px) {
-  .home-row {
-    display: block;
-  }
-  .home-column {
-    flex: 100%;
-  }
   .home {
     max-width: auto;
     width: auto;
@@ -403,27 +432,17 @@
   }
   /* Contact */
 }
-
 @media (max-width: 450px) {
 
   /*Home*/
-  h2 {
-    font-size: 16px;
+  .home-column:nth-child(1) {
+    margin: 2rem;
+    width: auto;
   }
-
-  h2 .painted {
-    font-size: 17px;
+  .home-column:nth-child(2) {
+    margin: 2rem auto;
+    width: 300px;
   }
-
-  .clear {
-    padding: 0 30px;
-  }
-
-  .thumbnail:nth-child(odd),
-  .thumbnail:nth-child(even) {
-    padding: .5rem 0 !important;
-  }
-
   /*Nav*/
   .site-header .logo {
     font-size: 18px;
@@ -482,8 +501,19 @@
     padding: 4rem 1rem 2rem 1rem;
   }
 }
-
 @media (max-width: 320px) {
+  .home-row {
+    margin: 140px auto;
+  }
+  .home-column:nth-child(1) {
+    margin: 2rem;
+    width: auto;
+  }
+  .home-column:nth-child(2) {
+    margin: 2rem;
+    width: auto;
+  }
+
   .site-header .logo {
     font-size: 16px;
   }
